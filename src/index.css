@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-cream: #F5F0E8;
+    --color-ink: #0D0D0D;
+    --color-red: #C8372D;
+    --color-muted: #8A8579;
+  }
+
+  html {
+    /* Lenis requires overflow on html/body to be unset or auto */
+    overflow: auto;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: 'Space Grotesk', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Lenis smooth scroll wrapper */
+  html.lenis {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+}
+
+@layer utilities {
+  /* Kinetic hero seam line */
+  .kinetic-seam {
+    display: block;
+    width: 2px;
+    background-color: var(--color-red);
+    transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.4s ease;
+  }
+}
