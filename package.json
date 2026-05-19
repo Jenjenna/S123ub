@@ -26,6 +26,6 @@
     "postcss": "^8.4.49",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "@types/imagesloaded": "^4.2.6"
+    "@types/imagesloaded": "^4.1.0"
   }
 }
